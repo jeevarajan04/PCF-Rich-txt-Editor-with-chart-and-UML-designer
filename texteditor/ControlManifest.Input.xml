@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="XRMTools" constructor="texteditor" version="0.0.1" display-name-key="texteditor_Display_Key" description-key="texteditor_Desc_Key" control-type="standard">
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="txtEditorProperty" display-name-key="txtEditor_Display_Key" description-key="txtEditor_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+   
+    <!-- 
+    SingleLine.TextArea
+      Property node's of-type attribute can be of-type-group attribute. 
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- <css path="../node_modules/tui-editor/dist/tui-editor.css" order="1" /> -->
+      <!-- <css path="../node_modules/tui-editor/dist/tui-editor.min.css" order="1" /> -->
+      <!-- <css path="../node_modules/tui-editor/dist/tui-editor-contents.css" order="1" /> -->
+      <!-- <css path="../node_modules/tui-editor/dist/tui-editor-contents.min.css" order="1" /> -->
+      <css path="dist/css/tuieditor.css" order="1" />
+      <css path="dist/css/tuieditorcontent.css" order="1" />
+      <css path="../node_modules/codemirror/lib/codemirror.css" order="1" />
+      <css path="../node_modules/highlight.js/styles/github.css" order="1" />
+
+      <!-- <css path="../node_modules/tui-color-picker/dist/tui-color-picker.min.css" order="1" />
+      <css path="../node_modules/tui-chart/dist/tui-chart.min.css" order="1" /> -->
+      <!-- <img path="../node_modules/tui-editor/dist/tui-editor.png" /> -->
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/texteditor.css" order="1" />
+      <resx path="strings/texteditor.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+  </control>
+</manifest>
