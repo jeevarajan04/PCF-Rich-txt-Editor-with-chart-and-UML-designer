@@ -2,7 +2,6 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 var Editor = require('tui-editor/dist/tui-editor-Editor-all');
 
-
 export class texteditor implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private _value: any;
